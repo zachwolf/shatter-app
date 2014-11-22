@@ -799,7 +799,7 @@ function getHypotenuseLength(x1, y1, x2, y2) {
    *   BEGIN CONSTANTS   *
    ***********************/
 
-    , $stage  = $('canvas')
+  var $stage  = $('canvas')
     , ctx     = new Chain($stage.get(0).getContext('2d'))
     , stage   = {
         $       : $stage
@@ -821,13 +821,6 @@ function getHypotenuseLength(x1, y1, x2, y2) {
    * ├─┤├─┘├─┘ *
    * ┴ ┴┴  ┴   *
    *************/
-
-  if (app.debug) {
-    app.expose = app.expose || {}
-
-    app.expose.ctx = ctx
-    app.expose.stage = stage
-  }
   
   ctx.set('strokeStyle', '#dadd15')
      .set('lineWidth', 3)
@@ -898,25 +891,46 @@ function getHypotenuseLength(x1, y1, x2, y2) {
     // .addItem({
     //   points: [new Point({x: 150, y: 400}), new Point({x: 250, y: 300})]
     // })
-    .addItem({
-      points: [new Point({x: 175, y: 200}), new Point({x: 175, y: 350})]
-    })
-    .addItem({
-      points: [new Point({x: 100, y: 325}), new Point({x: 500, y: 325})]
-    })
     // .addItem({
-    //   points: [new Point({x: 100, y: 225}), new Point({x: 250, y: 225})]
+    //   points: [new Point({x: 175, y: 200}), new Point({x: 175, y: 350})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 100, y: 325}), new Point({x: 500, y: 325})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 100, y: 225}), new Point({x: 150, y: 225})]
     // })
 
-  // for (var i = 0; i <= 10; i++) {
-  //   var x1 = getRandomArbitrary(0, 600)
-  //     , y1 = getRandomArbitrary(0, 600)
-  //     , x2 = getRandomArbitrary(0, 600)
-  //     , y2 = getRandomArbitrary(0, 600)
-  //   lines.addItem({
-  //     points: [new Point({x: x1, y: y1}), new Point({x: x2, y: y2})]
-  //   })
-  // };
+  for (var i = 0; i <= 10; i++) {
+    var x1 = getRandomArbitrary(0, 600)
+      , y1 = getRandomArbitrary(0, 600)
+      , x2 = getRandomArbitrary(0, 600)
+      , y2 = getRandomArbitrary(0, 600)
+    lines.addItem({
+      points: [new Point({x: x1, y: y1}), new Point({x: x2, y: y2})]
+    })
+  };
+    // .addItem({
+    //   points: [new Point({x: 100, y: 100}), new Point({x: 250, y: 101})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 50, y: 150}), new Point({x: 300, y: 150})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 150, y: 200}), new Point({x: 350, y: 200})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 0, y: 250}), new Point({x: 200, y: 250})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 150, y: 300}), new Point({x: 200, y: 300})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 0, y: 350}), new Point({x: 300, y: 350})]
+    // })
+    // .addItem({
+    //   points: [new Point({x: 500, y: 400}), new Point({x: 600, y: 400})]
+    // })
 
   var lineStart = false
     , drawPoint
