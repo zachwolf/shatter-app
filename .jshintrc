@@ -1,0 +1,26 @@
+{
+  "globalstrict" : false,
+  "node" : true,
+  "curly" : false,
+  "eqeqeq" : true,
+  "forin" : true,
+  "newcap" : true,
+  "nonbsp" : true,
+  "undef" : true,
+	"asi" : true,
+	"laxcomma" : true,
+	"sub" : true,
+	"expr" : true,
+  "unused" : "vars",
+  "globals" : {
+    "_" : true,
+    "console" : true,
+    "window" : true,
+    "require" : true,
+    "jQuery" : true,
+    "module" : true,
+    "Modernizr" : true,
+    "Backbone" : true,
+    "Handlebars" : true
+  }
+}

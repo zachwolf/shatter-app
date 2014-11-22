@@ -1,0 +1,37 @@
+{
+  "name": "Cambio",
+  "version": "0.1.0",
+  "description": "Parallax site for Cambio Education",
+  "main": "app/.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zachwolf/Cambio.git"
+  },
+  "keywords": [],
+  "author": "Zach Wolf",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/zachwolf/Cambio.git/issues"
+  },
+  "devDependencies": {
+    "grunt": "0.4.2",
+    "grunt-contrib-watch": "0.5.3",
+    "grunt-contrib-livereload": "0.1.2",
+    "grunt-contrib-jshint": "0.8.0",
+    "grunt-contrib-clean": "0.5.0",
+    "underscore": "1.5.2",
+    "load-grunt-tasks": "0.2.1",
+    "grunt-open": "0.2.2",
+    "grunt-todo": "0.1.2",
+    "grunt-concurrent": "0.4.3",
+    "browserify": "4.1.8",
+    "grunt-browserify": "2.1.0",
+    "grunt-contrib-uglify": "0.3.2",
+    "grunt-git-reset": "0.1.1",
+    "grunt-contrib-copy": "0.5.0",
+    "remapify": "1.1.1"
+  }
+}
