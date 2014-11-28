@@ -32,7 +32,31 @@ module.exports = function (grunt) {
                   , filter: function(alias, dirname, basename) {
                     return path.join(dirname, basename.replace(/^\_(.*)\.js$/, '$1'));
                   }
-                }
+                },
+
+
+                // expose directories as modules
+                // require('dir/index') -> require('dir')
+                {
+                  src: './**/*.js'
+                  , cwd: SETTINGS.SCRIPT_SOURCE_PATH
+                  , filter: function(alias, dirname, basename) {
+                    
+                    if((/^\_?index\.js$/).test(basename)) {
+                      return dirname;
+                    }
+
+                    return alias;
+                  }
+                }//,
+                // expose lib dir
+                // {
+                //   src: './**/*.js'
+                //   , expose: ''
+                //   , cwd: SETTINGS.SCRIPT_SOURCE_PATH + '/lib'
+                // }
+
+
               ]);
             }
           },
