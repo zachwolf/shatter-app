@@ -70,6 +70,13 @@ module.exports = function (grunt) {
         var src  = path.join(SETTINGS.SCRIPT_SOURCE_PATH, file)
           , dest = path.join(SETTINGS.SCRIPT_BUILD_PATH, file)
 
+        if ((/^.+(lib\/?).+$/).test(src)) {
+          console.log('skipping', src);
+          return;
+        }
+
+        console.log('adding', src);
+
         conf.userScripts.config.files[dest] = src;
       });
 

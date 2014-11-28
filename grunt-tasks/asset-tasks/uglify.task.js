@@ -12,6 +12,7 @@ module.exports = function (grunt) {
       task: {
         options: {
           report: "min" // "gzip" // gzip kills task speed
+        , sourceMap: true
         },
         files: {}
       }

@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     
     // script tasks
     // grunt.task.run('jshint:dev');
-    // grunt.task.run('uglify');
+    grunt.task.run('uglify');
     grunt.task.run('browserify');
 
     // copy assets
