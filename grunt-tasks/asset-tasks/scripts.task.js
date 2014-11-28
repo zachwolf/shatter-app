@@ -28,10 +28,8 @@ module.exports = function (grunt) {
                 // remap require('./foo') -> require('src/foo')
                 {
                   src: './**/*.js'
-                  // , cwd: SETTINGS.SCRIPT_SOURCE_PATH
-                  , cwd: 
+                  , cwd: SETTINGS.SCRIPT_SOURCE_PATH
                   , filter: function(alias, dirname, basename) {
-                    console.log('remapify', basename);
                     return path.join(dirname, basename.replace(/^\_(.*)\.js$/, '$1'));
                   }
                 }
@@ -43,10 +41,12 @@ module.exports = function (grunt) {
       }
     };
 
-    console.log(getFileTree( SETTINGS.SCRIPT_SOURCE_PATH ));
     getFileTree( SETTINGS.SCRIPT_SOURCE_PATH )
       .forEach(function(file){
-        conf.userScripts.config.files[ SETTINGS.SCRIPT_BUILD_PATH + '/' + file ] = SETTINGS.SCRIPT_SOURCE_PATH + file;
+        var src  = path.join(SETTINGS.SCRIPT_SOURCE_PATH, file)
+          , dest = path.join(SETTINGS.SCRIPT_BUILD_PATH, file)
+
+        conf.userScripts.config.files[dest] = src;
       });
 
     grunt.config('_browserify', conf.userScripts);
