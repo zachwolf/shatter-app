@@ -3,17 +3,13 @@
  */
 (function($, window, undefined){
 
-  var Grid   = require('canvas-grid')/*
-    , config = require('config')*/
+  var shatter = require('shatter')
 
   $(function(){
     /**
      * kick everything off now that the document is ready
      */
 
-    new Grid({
-      el: ".photogrid"
-    })
-
+    console.log('hi!', shatter);
   })
 }(jQuery, window))
