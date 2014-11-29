@@ -1,4 +1,3 @@
-
 module.exports = {
-	hello: '!!!!'
+	debug: true
 }

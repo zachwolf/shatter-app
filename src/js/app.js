@@ -3,13 +3,14 @@
  */
 (function($, window, undefined){
 
-  var shatter = require('shatter')
+  require('polyfill')
+
+  var Shatter = require('shatter')
 
   $(function(){
     /**
      * kick everything off now that the document is ready
      */
-
-    console.log('hi!', shatter);
+    console.log('hi!', new Shatter);
   })
 }(jQuery, window))

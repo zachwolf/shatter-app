@@ -1,12 +1,4 @@
 /**
- * thanks to SciencePrimer.com for help with the math
- * http://scienceprimer.com/drawing-regular-polygons-javascript-canvas
- *
- * thanks to mathopenref.com for help with line intersection
- * http://www.mathopenref.com/coordintersection.html
- */
- 
-/**
  * Gets a random number between a range
  *
  * @param {Number} min - smallest range
@@ -80,4 +72,11 @@ function getHypotenuseLength(x1, y1, x2, y2) {
     , B = Math.abs(y1 - y2)
 
   return Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2))
+}
+
+module.exports = {
+    getRandomArbitrary: getRandomArbitrary
+  , generateID: generateID
+  , sequential: sequential
+  , getHypotenuseLength: getHypotenuseLength
 }
