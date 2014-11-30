@@ -120,8 +120,4 @@ Cache.prototype.trigger = function(event/*, data?*/) {
   return this
 }
 
-// module.exports = {
-//   Cache: Cache
-// }
-
 module.exports = Cache
