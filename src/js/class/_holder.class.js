@@ -9,6 +9,7 @@ var Cache = require('class/cache.class')
 /**
  * Generic class for creating an array of sub classes
  * 
+ * @requires Chain
  * @param {function} Child - subclass to be called when adding an item
  * @returns 
  */
@@ -70,6 +71,4 @@ Holder.prototype.empty = function() {
   return this
 }
 
-module.exports = {
-  Holder: Holder
-}
+module.exports = Holder
