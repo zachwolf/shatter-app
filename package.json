@@ -6,8 +6,8 @@
   "scripts": {
     "webpack": "webpack",
     "webpack:watch": "npm run webpack -- --watch",
-    "server": "nodemon server.js",
-    "start": "parallelshell \"npm run server\" \"npm run webpack\""
+    "server": "node server.js",
+    "start": "parallelshell 'npm run server' 'npm run webpack:watch'"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,6 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "express": "^4.13.4",
-    "nodemon": "^1.9.1"
+    "express": "^4.13.4"
   }
 }
