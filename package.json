@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "express": "^4.13.4",
-    "livereload": "^0.4.1",
     "nodemon": "^1.9.1"
   }
 }
