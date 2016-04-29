@@ -14,7 +14,8 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.less$/,
-      loader: "css-loader!less-loader"
+      // loader: "css-loader!less-loader!file-loader"
+      loader: "style-loader!css-loader!less-loader"
     }, {
       test: /\.hbs$/,
       loader: 'handlebars-loader'
@@ -24,6 +25,3 @@ module.exports = {
     new HtmlWebpackPlugin()
   ]
 }
-
-// test: /\.(png|jpg|gif)$/,
-//   loader: "file-loader?name=img/img-[hash:6].[ext]"
